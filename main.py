@@ -14,7 +14,7 @@ def index():
 def time():
     berlin_tz = pytz.timezone("Europe/Berlin")
     berlin_time = datetime.datetime.now(berlin_tz)
-    return berlin_time.strftime("%d.%m.%Y, %H:%M:%S Uhr")
+    return "Lokale Zeit: " + berlin_time.strftime("%d.%m.%Y, %H:%M:%S Uhr")
 
 def main():
     app.run(port=int(os.environ.get('PORT', 80)))
